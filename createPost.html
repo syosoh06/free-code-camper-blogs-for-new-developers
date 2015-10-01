@@ -1,0 +1,23 @@
+
+
+<div class="well">
+    <a href="{{fccPost.link}}">
+        <img src="{{fccPost.author.picture}}" ng-if="fccPost.author.picture" class="img-responsive">
+        <p class='title' ng-if="fccPost.storyLink"  href="{{fccPost.link}}">{{fccPost.storyLink}}</p>
+    </a>
+
+
+    <div class="row text-center smFont">
+        <p ng-if="fccPost.author.username" class="text-center by">  {{fccPost.author.username}}</p>
+        <p >Posted on: {{fccPost.timePosted}}</p>
+    </div>
+
+    <div class="row wrapper">
+        <span class="pull-left">♥ {{fccPost.upVotes.length}} </span>
+             
+      <span class="pull-right">
+        <a href="{{fccPost.link}}" class="btn btn-info" role="button">Discuss</a>
+      </span>
+
+    </div>
+</div>
